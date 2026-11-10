@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Tommi – Was geht in Köln?</title>
+<meta name="description" content="Interaktive 3D-Karte von Köln: Partys, Konzerte, Theater und Aktionen leuchten auf ihren Häusern.">
+<meta name="theme-color" content="#0C0E12">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tommi">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<link rel="stylesheet" href="icons.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="map"></div>
+
+<div id="ui">
+  <header id="top">
+    <button id="filterBtn" class="pill" aria-label="Zeitraum wechseln">
+      <b class="logo">tommi</b><span id="filterLabel">Alles</span><i class="ic sm i-chevron-down"></i>
+    </button>
+    <button id="legendBtn" class="pill">
+      <span class="dots"><i style="background:#FF2D95"></i><i style="background:#7A3CFF"></i><i style="background:#F2B100"></i><i style="background:#00BFA6"></i></span>
+      Legende
+    </button>
+  </header>
+
+  <div id="controls">
+    <button id="compass" class="round" aria-label="Nach Norden ausrichten"><i class="ic i-navigation"></i></button>
+    <div class="stack">
+      <button id="zoomIn" aria-label="Näher"><i class="ic i-plus"></i></button>
+      <button id="zoomOut" aria-label="Weiter weg"><i class="ic i-minus"></i></button>
+      <button id="home" aria-label="Köln-Übersicht"><i class="ic i-locate-fixed"></i></button>
+      <button id="theme" aria-label="Hell oder dunkel"><i class="ic i-sun" id="themeIcon"></i></button>
+    </div>
+  </div>
+
+  <div id="bottom">
+    <div id="attrib">© OpenStreetMap · OpenFreeMap</div>
+    <div id="dock"></div>
+  </div>
+
+  <nav id="tabs">
+    <button data-tab="home" class="on" aria-label="Karte"><i class="ic i-house"></i></button>
+    <button data-tab="social" aria-label="Social"><i class="ic i-messages-square"></i></button>
+    <button id="plus" aria-label="Event erstellen"><i class="ic i-plus"></i></button>
+    <button data-tab="activity" aria-label="Aktivität"><i class="ic i-zap"></i></button>
+    <button data-tab="profile" aria-label="Profil"><i class="ic i-user"></i></button>
+  </nav>
+</div>
+
+<section id="placeholder" hidden></section>
+<div id="scrim" hidden></div>
+<section id="sheet" hidden></section>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

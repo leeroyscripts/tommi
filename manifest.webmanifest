@@ -1,0 +1,15 @@
+{
+  "name": "Tommi",
+  "short_name": "Tommi",
+  "description": "Was geht in Köln? Interaktive 3D-Karte mit Events.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0C0E12",
+  "theme_color": "#0C0E12",
+  "icons": [
+    { "src": "icon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "icon.png", "sizes": "1024x1024", "type": "image/png" }
+  ]
+}
